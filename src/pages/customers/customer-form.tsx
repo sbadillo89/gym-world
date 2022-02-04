@@ -52,6 +52,9 @@ const CustomerForm = ({
           defaultValue={data && data.age.toString()}
           placeholder="Ingresa tu edad"
           type="number"
+          rules={{
+            required: "La edad es requerida",
+          }}
         />
         <Input
           name="address"
@@ -65,6 +68,9 @@ const CustomerForm = ({
           placeholder="-- seleccione --"
           options={["Masculino", "Femenino"]}
           defaultValue={data && data.gender}
+          rules={{
+            required: "El género es requerido",
+          }}
         />
         <Input
           name="phone"
@@ -72,6 +78,9 @@ const CustomerForm = ({
           placeholder="Ingresa tu teléfono"
           type="number"
           defaultValue={data && data.phone.toString()}
+          rules={{
+            required: "El télefono es requerido",
+          }}
         />
         <Input
           name="dateOfBirth"
